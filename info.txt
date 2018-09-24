@@ -1,0 +1,142 @@
+//JS
+
+$("#Init").hide();
+$("#Waiting").hide();
+$("#Selecting").hide();
+$("#Night").hide();
+$("#Turn").hide();
+$("#Day").hide();
+$("#Voting").hide();
+$("#Results").hide();
+
+
+/////
+  $("#name").val();
+  $("#group").val();
+$(".Play").click();
+
+$(".x").click(); //add each one individually
+$(".Next").click();
+$(".Quit").click();
+
+$(".You").html();
+$(".Role").click();
+$(".Start").click();
+$(".Exit").click();
+
+$(".Description").html();
+$(".CenterCards").append();
+  $(".CenterCards .Center").click();
+$(".PlayerCards").append();
+  $(".PlayerCards .Player").click();
+$(".EndTurn").click();
+
+$(".Time").html();
+$(".DisplayRoles").append();
+  $(".DisplayRoles .DisplayRole").click();
+$(".DisplayPlayers").append();
+  $(".DisplayPlayers .DisplayPlayer").click();
+$(".VoteNow").click();
+
+$(".Time").html();
+$(".VotingCards").append();
+  $(".VotingCards .Player").click();
+
+$(".Outcome").html();
+$(".Execution").html();
+$(".Results").append();
+$(".PlayAgain").click();
+/////
+
+
+var game = {
+	"stage": -1,
+	"players": [],
+	"roles": [],
+};
+
+NO INCREMENTAL UPDATES 
+
+/* player
+
+{
+	"id": 0
+	"name": "william",
+	"role": "",
+	"history": [],
+}
+
+slideDown: show
+slideUp: hide
+
+role list
+
+roles are strings
+
+center is array of roles
+*/
+
+play: clear roles, go to waiting screen
+start: if no roles, go to roles; else if roles, go to game
+quit: exit self, go to init
+exit: exit game by going to results
+votenow: explanatory
+
+
+
+everyone close your eyes
+doppelganger wake up and look at another player's card. you are now that role.
+if you viewed the seer, roober, trobblemaker, or drunk card, do your action now.
+if you are now a minion, keep your eyes open. otherwise, close them. werewolves, stick out your thumb so the doppelganger-minion can see who you are.
+werewolves, put your thumbs away.
+dppelganger, close your eyes.
+werewolves, wake up and look for other werewolves.
+if there is only one werewolf, you may look at a card from the cente.r
+werewolves close your eyes.
+minion wake up. werewolves stick out your thumb so th eminon can see who you are.
+werewolves, put your thumb away.
+minoin close your eyes.
+masons wake up and look for the other mason.
+masons, close your eyes.
+see,r wake up. you may look at noathe rplayer's card or two of the centercards. 
+seer close your eyes.
+robber, wake up. you may exchange your card w another player's card, and then view your new card.
+robber close ur eyes
+troublemaker wake up. you may exchange cards between two other players.
+tb cloe eyes
+drunk wake up and exchange your card w acard from the center
+insomniac wake up and look at your card
+insomniac close ur eyes
+doppelganger if you viewed the insomniac card wake up and look at your card
+doppelganger close your eyes
+
+0 Doppelganger
+1 Doppelganger-Seer
+2 Doppelganger-Robber
+3 Doppelganger-Troublemaker
+4 Doppelganger-Drunk
+5 Doppelganger-Minion
+6 Doppelganger-Werewolf
+7 Werewolf
+8 Minion
+9 Mason
+10 Seer
+11 Robber
+12 Troublemaker
+13 Drunk
+14 Insomniac
+15 Doppelganger-Insomniac
+
+0.5: ___ is the ____. you are now the doppelganger-____.
+
+FEATURES:
+- cookie remembering of players who lose connections
+- modular roles
+- incentivize doing roles faster w annoying sounds
+- better design
+
+BUGS:
+- multiple werewolves (minion), masons, do not show up correctly
+- final roles list does not show up correctly
+- doppelganger-insomniac role is broken (when robbed...??)
+- villagers win when no werewolves
