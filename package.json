@@ -19,5 +19,20 @@
       "server": "server/main.js"
     },
     "testModule": "tests/main.js"
-  }
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "postcss": "^7.0.30",
+    "postcss-load-config": "^2.1.0",
+    "tailwindcss": "^1.4.6"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
